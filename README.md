@@ -8,14 +8,14 @@
 
 
 ## change the format of a picture or video
-` ./ffmpeg -i in.jpg -preset ultrafast out.png,`
+` ./ffmpeg -i in.jpg -preset ultrafast out.png`
 
 ## use accelrated Cuda chroma key filter
 
 `
 ffmpeg -v verbose
--hwaccel cuda -hwaccel_output_format cuda -i input_green.mp4  
--hwaccel cuda -hwaccel_output_format cuda -i sea.mp4 
+-hwaccel cuda -hwaccel_output_format cuda -i input_chroma_video.mp4  
+-hwaccel cuda -hwaccel_output_format cuda -i overlay_video.mp4 
 -init_hw_device cuda 
 -filter_complex 
 " 
